@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotlight Add-On</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Space+Grotesk:wght@300..700&family=Zain:wght@200;300;400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] min-h-screen h-f font-sans"
+  >
+    <div class="all-content flex flex-col justify-between min-h-lvh">
+      <header class="text-white w-full mt-14">
+        <h1
+          class="text-center text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"
+        >
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-700"
+          >
+            <img
+              class="m-auto h-auto w-44"
+              src="/img/Logo.png"
+              alt="image description"
+            />
+          </span>
+        </h1>
+        <p
+          class="font-dancing text-lg text-center font-normal text-#f6f5f5 lg:text-xl dark:text-#ffffff-400"
+        >
+          A game of strategy, digital culture, and surprises where the road to
+          fame is in your hands.
+        </p>
+      </header>
+
+      <main
+        class="container mx-auto h-full flex flex-col justify-center items-center"
+      >
+        <!-- Question Display -->
+        <section
+          id="question-card"
+          class="bg-white shadow-[2px_3px_5px_-1px_rgba(0,_0,_0,_0.1)] rounded-lg p-6 w-full max-w-md text-center"
+        >
+          <h2 class="text-lg font-semibold text-gray-700">
+            Ready for your digital challenge?
+          </h2>
+          <p id="question" class="mt-4 text-gray-800 text-xl font-bold">
+            What does SEO stand for?
+          </p>
+          <form id="answer-form" class="mt-6 flex flex-col">
+            <input
+              type="text"
+              id="answer"
+              placeholder="Type your answer here"
+              class="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+            <button
+              type="submit"
+              class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-500 transition"
+            >
+              Submit Answer
+            </button>
+          </form>
+          <p id="feedback" class="mt-4 text-gray-600 hidden">
+            Correct! Move forward 2 spaces.
+          </p>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <div class="mt-8 flex gap-4">
+          <button
+            id="next-question"
+            class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-500 transition"
+          >
+            Next Question
+          </button>
+        </div>
+      </main>
+
+      <footer class="bg-gray-800 text-white w-full p-4">
+        <div class="container mx-auto text-center text-sm">
+          <p>© 2024 Spotlight Game Add-On. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
