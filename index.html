@@ -6,71 +6,80 @@
     <title>Spotlight Add-On</title>
     <link rel="stylesheet" href="src/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Space+Grotesk:wght@300..700&family=Zain:wght@200;300;400;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body
-    class="[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] min-h-screen h-f font-sans"
+    class="[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] min-h-screen h-full font-sans"
   >
-    <div class="all-content flex flex-col justify-between min-h-lvh">
+    <div class="all-content flex flex-col justify-between min-h-screen">
+      <!-- Header -->
       <header class="text-white w-full mt-14">
-        <h1
-          class="text-center text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"
-        >
+        <h1 class="text-center text-3xl font-extrabold md:text-5xl lg:text-6xl">
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-700"
           >
             <img
               class="m-auto h-auto w-44"
               src="img/Logo.png"
-              alt="image description"
+              alt="Spotlight Logo"
             />
           </span>
         </h1>
         <p
-          class="font-dancing text-lg text-center font-normal text-#f6f5f5 lg:text-xl dark:text-#ffffff-400"
+          class="font-dancing text-lg text-center font-normal lg:text-xl text-gray-200 mt-4"
         >
           A game of strategy, digital culture, and surprises where the road to
           fame is in your hands.
         </p>
       </header>
 
+      <!-- Main Content -->
       <main
-        class="container mx-auto h-full flex flex-col justify-center items-center"
+        class="container mx-auto h-full flex flex-col justify-center items-center px-4"
       >
-        <!-- Question Display -->
+        <!-- Question Card -->
         <section
-        id="question-card"
-        class="bg-white shadow-[2px_3px_5px_-1px_rgba(0,_0,_0,_0.1)] rounded-lg p-6 w-full max-w-md text-center"
-      >
-        <h2 class="text-lg font-semibold text-gray-700">
-          The ultimate question
-        </h2>
-        <p id="question" class="mt-4 text-gray-800 text-xl font-bold">
-        </p>
-        <form id="answer-form" class="mt-6">
-          <div id="answer-options" class="flex flex-col gap-4">
-            <!-- Les options radio seront insérées ici dynamiquement -->
-          </div>
-          <!-- Le bouton submit doit être après les options de réponse -->
-          <button
-            type="submit"
-            class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-500 transition"
-          >
-            Submit Answer
-          </button>
-        </form>
-        <p id="feedback" class="mt-4 text-gray-600 hidden">
-        </p>
-      </section>
-      
+          id="question-card"
+          class="bg-white shadow-[2px_3px_5px_-1px_rgba(0,_0,_0,_0.1)] rounded-lg p-6 w-full max-w-lg text-center sm:w-[90%] mt-8"
+        >
+          <h2 class="text-lg font-semibold text-gray-700">
+            The ultimate question
+          </h2>
+          <p id="question" class="mt-4 text-gray-800 text-xl font-bold">
+            Which technology is commonly associated with cryptocurrencies?
+          </p>
+          <form id="answer-form" class="mt-6">
+            <div id="answer-options" class="flex flex-col gap-4">
+              <label>
+                <input type="radio" name="answer" value="Blockchain" />
+                Blockchain
+              </label>
+              <label>
+                <input type="radio" name="answer" value="Cloud Computing" />
+                Cloud Computing
+              </label>
+              <label>
+                <input type="radio" name="answer" value="Artificial Intelligence" />
+                Artificial Intelligence
+              </label>
+            </div>
 
-        <!-- Navigation Buttons -->
+            <button
+              type="submit"
+              class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-500 transition"
+            >
+              Submit Answer
+            </button>
+          </form>
+          <p id="feedback" class="mt-4 text-gray-600 hidden"></p>
+        </section>
+
+        <!-- Next Question Button -->
         <div class="mt-8 flex gap-4">
           <button
             id="next-question"
@@ -81,6 +90,7 @@
         </div>
       </main>
 
+      <!-- Footer -->
       <footer class="bg-gray-800 text-white w-full p-4">
         <div class="container mx-auto text-center text-sm">
           <p>© 2024 Spotlight Game Add-On. All rights reserved.</p>

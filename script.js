@@ -2,7 +2,7 @@ const questionCard = document.getElementById('question-card');
 const questionDisplay = document.getElementById('question');
 const feedback = document.getElementById('feedback');
 const answerForm = document.getElementById('answer-form');
-const answerOptions = document.getElementById('answer-options'); // Conteneur pour les options
+const answerOptions = document.getElementById('answer-options'); 
 const nextQuestionButton = document.getElementById('next-question');
 
 const questions = [
@@ -38,17 +38,14 @@ const questions = [
   },
 ];
 
-let currentQuestionIndex = Math.floor(Math.random() * questions.length); // Sélection aléatoire d'une question
+let currentQuestionIndex = Math.floor(Math.random() * questions.length); 
 
-// Charger une question et ses options
 const loadQuestion = () => {
   const currentQuestion = questions[currentQuestionIndex];
   questionDisplay.textContent = currentQuestion.question;
 
-  // Vider les options précédentes
   answerOptions.innerHTML = "";
 
-  // Générer des boutons radio pour les choix
   currentQuestion.options.forEach((option, index) => {
     const radioWrapper = document.createElement("div");
     radioWrapper.classList.add("flex", "items-center", "mt-2");
@@ -72,7 +69,6 @@ const loadQuestion = () => {
   feedback.classList.add("hidden");
 };
 
-// Vérifier la réponse
 const checkAnswer = (event) => {
   event.preventDefault();
 
@@ -92,15 +88,12 @@ const checkAnswer = (event) => {
   feedback.classList.remove("hidden");
 };
 
-// Passer à la question suivante
 const nextQuestion = () => {
-  currentQuestionIndex = Math.floor(Math.random() * questions.length); // Nouvelle question aléatoire
+  currentQuestionIndex = Math.floor(Math.random() * questions.length); 
   loadQuestion();
 };
 
-// Écouteurs d'événements
 answerForm.addEventListener('submit', checkAnswer);
 nextQuestionButton.addEventListener('click', nextQuestion);
 
-// Charger la première question
 loadQuestion();
