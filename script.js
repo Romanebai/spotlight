@@ -38,7 +38,7 @@ const questions = [
   },
 ];
 
-let currentQuestionIndex = 0;
+let currentQuestionIndex = Math.floor(Math.random() * questions.length); // Sélection aléatoire d'une question
 
 // Charger une question et ses options
 const loadQuestion = () => {
@@ -94,7 +94,7 @@ const checkAnswer = (event) => {
 
 // Passer à la question suivante
 const nextQuestion = () => {
-  currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+  currentQuestionIndex = Math.floor(Math.random() * questions.length); // Nouvelle question aléatoire
   loadQuestion();
 };
 
