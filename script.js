@@ -17,9 +17,9 @@ const questions = [
     answer: "Choosing relevant keywords",
   },
   {
-    question: "On social media, which factor is most important for a post to go viral?",
-    options: ["Number of hashtags", "User interactions", "Posting time"],
-    answer: "User interactions",
+    question: "What does 'bounce rate' measure?",
+    options: ["The speed at which your website loads", "The number of visitors who leave after viewing one page", "The total number of clicks on your homepage", "The percentage of visitors who click on a call-to-action"],
+    answer: "The number of visitors who leave after viewing one page",
   },
   {
     question: "Which field primarily uses AI tools like ChatGPT?",
@@ -35,6 +35,41 @@ const questions = [
     question: "In digital marketing, what does the term 'CTA' stand for?",
     options: ["Call To Action", "Click Through Analysis", "Content Targeted Advertising"],
     answer: "Call To Action",
+  },
+  {
+    question: "What is the purpose of a '404 error' page?",
+    options: ["To redirect users to the homepage", "To inform users that the website is down", "To inform users that the page does not exist"],
+    answer: "To inform users that the page does not exist",
+  },
+  {
+    question: "What is the purpose of an SSL certificate on a website?",
+    options: ["To increase website speed", "To protect user data", "To increase the number of visitors"],
+    answer: "To protect user data",
+  },
+  {
+    question: "What is the purpose of a 'favicon' on a website?",
+    options: ["To increase website speed", "To protect user data", "To increase the number of visitors", "To improve brand recognition"],
+    answer: "To improve brand recognition",
+  },
+  {
+    question: "What is the purpose of 'alt text' on an image?",
+    options: ["To increase website speed", "To protect user data", "To improve SEO", "To improve brand recognition"],
+    answer: "To improve SEO",
+  },
+  {
+    question: "What does 'CTR' stand for in digital marketing?",
+    options: ["Click Through Rate", "Content Targeted Recommendations", "Customer Targeted Results"],
+    answer: "Click Through Rate",
+  },
+  {
+    question: "What is the main goal of retargeting ads?",
+    options: ["To increase website speed", "To protect user data", "To improve brand recognition", "To bring back visitors who did not convert"],
+    answer: "To bring back visitors who did not convert",
+  },
+  {
+    question: "Which acquisition channel typically has the highest conversion rate?",
+    options: ["Organic traffic", "Direct traffic", "Email marketing", "Social media traffic"],
+    answer: "Email marketing",
   },
 ];
 
